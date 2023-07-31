@@ -11,6 +11,10 @@ body {
     background-color: #FFF9E9;
 }
 
+.container {
+    padding: 0 100px;
+}
+
 .text-purple {
     color: #6C62D5;
 }
@@ -19,7 +23,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
 }
 
 .hero-left h1 {
@@ -187,7 +190,6 @@ header .hamburger-menu.active .line3 {
 }
 
 .recent-work {
-    padding: 0 100px;
     margin-top: 5rem;
 }
 
@@ -236,7 +238,7 @@ header .hamburger-menu.active .line3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
+    margin: 5rem 0;
     gap: 50px;
 }
 
@@ -283,18 +285,76 @@ header .hamburger-menu.active .line3 {
     color: #110E19;
 }
 
+.client {
+    background-color: #F7F6FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+}
+
+.client-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.client-wrapper .client-items-2 {
+    padding-top: 5rem;
+}
+
+.client-wrapper .client-items-1,
+.client-wrapper .client-items-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.client-wrapper .client-items-1 img,
+.client-wrapper .client-items-2 img {
+    width: 200px;
+}
+
+.client-wrapper .client-items-1 .client-item,
+.client-wrapper .client-items-2 .client-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    /* smooth shadow */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.client-wrapper .client-items-1 .client-item:hover,
+.client-wrapper .client-items-2 .client-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.client .client-left h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #110E19;
+    margin-bottom: 1rem;
+}
+
+.client .client-left p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #110E19;
+}
+
+
+
 /* responsive */
 @media (max-width: 1200px) {
-    .hero {
+    .container {
         padding: 0 50px;
     }
 
     header {
         padding: 1rem 50px;
-    }
-
-    .recent-work {
-        padding: 0 50px;
     }
 
     .recent-work .heading .heading-text h1 {
@@ -313,10 +373,14 @@ header .hamburger-menu.active .line3 {
         font-size: 0.8rem;
     }
 
+    .client {
+        padding: 2rem;
+    }
+
 }
 
 @media (max-width: 992px) {
-    .hero {
+    .container {
         padding: 0 30px;
 
     }
@@ -333,9 +397,6 @@ header .hamburger-menu.active .line3 {
         padding: 1rem 30px;
     }
 
-    .recent-work {
-        padding: 0 30px;
-    }
 
     .recent-work .heading .heading-text h1 {
         font-size: 1.5rem;
@@ -345,14 +406,23 @@ header .hamburger-menu.active .line3 {
         font-size: 0.8rem;
     }
 
+    .client {
+        padding: 2rem;
+    }
+
 
 
 }
 
 @media (max-width: 768px) {
-    .hero {
+    .container {
         padding: 0 30px;
+    }
+
+    .hero {
         flex-direction: column-reverse;
+        align-items: unset;
+        text-align: center;
     }
 
     .hero-left h1 {
@@ -380,9 +450,6 @@ header .hamburger-menu.active .line3 {
         display: block;
     }
 
-    .recent-work {
-        padding: 0 30px;
-    }
 
     .recent-work .heading {
         flex-direction: column;
@@ -406,6 +473,60 @@ header .hamburger-menu.active .line3 {
 
     .work {
         flex-direction: column;
+    }
+
+    .client {
+        flex-direction: column;
+        align-items: unset;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        gap: 0px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+
+    .client-wrapper .client-items-2 {
+        padding-top: 0px;
+    }
+
+    .client-wrapper .client-items-1 img,
+    .client-wrapper .client-items-2 img {
+        width: 110px;
+    }
+
+    .client-wrapper .client-items-1 .client-item,
+    .client-wrapper .client-items-2 .client-item {
+        padding: 1rem;
+    }
+
+    .client-wrapper .client-items-1,
+    .client-wrapper .client-items-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .client .client-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .client .client-left p {
+        font-size: 0.8rem;
+    }
+
+    .client .client-left {
+        padding: 30px;
+    }
+
+    .client .client-right {
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        /* paddimg */
+        padding: 30px;
+
     }
 
 }
