@@ -14,14 +14,13 @@
 
     <header>
         <div class="logo">
-            <img src="assets/images/logo.png" alt="logo">
+            Me
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li><a href="#recentWork">Recent Work</a></li>
+                <li><a href="#client">Client</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
             <!-- Hamburger menu -->
             <div class="hamburger-menu">
@@ -32,10 +31,9 @@
 
             <div id="mobileMenu">
                 <ul class="nav-links-mobile">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact Me</a></li>
+                    <li><a href="#recentWork">Recent Work</a></li>
+                    <li><a href="#client">Client</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -61,7 +59,7 @@
         </div>
     </section>
 
-    <section class="recent-work container">
+    <section class="recent-work container" id="recentWork">
         <div class="heading">
             <div class="heading-text">
                 <div class="line"></div>
@@ -117,7 +115,7 @@
         </div>
     </section>
 
-    <section class="client container">
+    <section class="client container" id="client">
         <div class="client-left">
             <h1>Working with the best <br> client accros the globe</h1>
             <p>
@@ -147,6 +145,34 @@
             </div>
         </div>
     </section>
+
+    <div class="contact container" id="contact">
+        <h1>Hubungi Saya</h1>
+        <form action="https://formsubmit.co/dilesin2023@gmail.com" method="post">
+            <input type="text" name="nama" placeholder="Nama">
+            <input type="email" name="email" placeholder="Email">
+            <textarea name="pesan" id="" cols="30" rows="10" placeholder="Pesan"></textarea>
+            <button class="btn-primary" type="submit">Kirim</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Made With ❤️ By Dilesin</p>
+        <div class="social-media">
+            <a href="">
+                Facebook
+            </a>
+            <a href="">
+                Instagram
+            </a>
+            <a href="">
+                Twitter
+            </a>
+            <a href="">
+                Youtube
+            </a>
+        </div>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
